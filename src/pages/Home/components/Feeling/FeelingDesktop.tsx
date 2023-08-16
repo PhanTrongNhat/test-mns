@@ -30,7 +30,7 @@ const FeelingDesktop = () => {
           }
         ></FeelingItem>
         <FeelingItem
-          title={'Nourishing'}
+          title={'De-stressor'}
           icon={
             <DeStressorIcon
               width={120}

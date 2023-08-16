@@ -34,6 +34,7 @@ export const ListItemTitle = styled.p`
   font-size: 20px;
   line-height: 26px;
   font-weight: ${p => p.theme.font.weight.medium};
+  text-transform: uppercase;
 `;
 
 export const ListItem = styled.p`

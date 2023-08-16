@@ -35,6 +35,7 @@ export const LogoTile = styled.h1`
   font-size: ${p => p.theme.font.size.xl};
   font-weight: ${p => p.theme.font.weight.bold};
   line-height: 45px;
+  font-family: ${p => p.theme.font.familyTitle};
 `;
 
 export const MenuWrapper = styled.div`

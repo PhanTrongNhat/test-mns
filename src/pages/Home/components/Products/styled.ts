@@ -29,6 +29,7 @@ export const SmallTitle = styled.h5`
   font-family: ${p => p.theme.font.familyTitle};
   font-size: ${p => p.theme.font.size.sm};
   color: ${p => p.theme.colors.warningOrange};
+  text-transform: uppercase;
 `;
 
 export const Description = styled.p`

@@ -19,6 +19,7 @@ export const SmallTitle = styled.p`
   font-size: ${p => p.theme.font.size.sm};
   line-height: ${p => p.theme.font.size.sm};
   font-weight: ${p => p.theme.font.weight.regular};
+  text-transform: uppercase;
 `;
 
 export const HeaderTitle = styled.h2`

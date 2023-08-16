@@ -50,14 +50,12 @@ export const FeelingItemTitle = styled.h5`
   font-weight: ${p => p.theme.font.weight.regular};
   line-height: 30px;
   font-family: ${p => p.theme.font.familyTitle};
-  text-transform: uppercase;
 `;
 
 export const FeelingItemDescription = styled.p`
   font-weight: ${p => p.theme.font.weight.regular};
   line-height: 19px;
   font-size: ${p => p.theme.font.size.sm};
-  text-transform: uppercase;
   text-align: center;
 `;
 
@@ -68,4 +66,8 @@ export const FeelingItemsWrapper = styled.div`
   justify-content: center;
   gap: 8%;
   z-index: 1;
+
+  div:first-child {
+    text-transform: uppercase;
+  }
 `;
