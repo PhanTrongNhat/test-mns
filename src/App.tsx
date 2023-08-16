@@ -1,24 +1,31 @@
+import { Footer } from 'components';
+import { Home } from 'pages';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { DEVICES } from 'utils';
+import { useAppDispatch, useAppSelector } from './app/hooks';
+import { initialDevice, selectAppDevice } from './slice';
 
 function App() {
+  const dispatch = useAppDispatch();
+  const appDevice = useAppSelector(selectAppDevice);
+
+  React.useEffect(() => {
+    if (appDevice.isFirstLoad) {
+      if (window.innerWidth <= 768) {
+        dispatch(initialDevice(DEVICES.MOBILE));
+      } else {
+        dispatch(initialDevice(DEVICES.DESKTOP));
+      }
+    }
+
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Home></Home>
+      <Footer></Footer>
     </div>
   );
 }
